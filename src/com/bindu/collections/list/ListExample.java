@@ -56,6 +56,16 @@ public class ListExample {
 			System.out.println(a);
 		}
 		
+		System.out.println("-------------------------------------");
+		
+		System.out.println(blist.indexOf("Bindu"));
+		
+		blist.set(blist.size()-1, "Bindu");
+		
+		System.out.println(blist.size());
+		
+		System.out.println(blist.contains("Diana"));
+		
 	}
 
 }
