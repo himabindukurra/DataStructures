@@ -102,6 +102,21 @@ public class ListExample {
 			System.out.print(e.nextElement()+" ");
 		}
 		
+		Collections.sort(alist);
+		
+		System.out.println("After sorting elements");
+		
+		for(Object a : alist){
+			System.out.print(a+" ");
+		}
+		
+		Collections.sort(blist, Collections.reverseOrder());
+			
+		System.out.println("After sorting blist elements descending order");
+		
+		for(Object a : blist){
+			System.out.print(a+" ");
+		}
 		
 	}
 
