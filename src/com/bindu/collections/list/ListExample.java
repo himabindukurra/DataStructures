@@ -14,13 +14,10 @@ public class ListExample {
 	public static <E> void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		List alist = new ArrayList(Arrays.asList("Swaroop","Kumari","Vijaya Lakshmi","Anil","Karthik","Ashrita","Bindu", "Anvesh"));
+		List alist = new ArrayList(Arrays.asList("SSS","KKK","V L","An","Kk","Ash","Bindu", "AAA"));
 		alist.add( "Bindu");
 		alist.add( "1");
 		alist.add( "Himabindu Kurra");
-		//alist.addAll( "Swaroop","Kumari","Vijaya Lakshmi","Anil","Karthik","Ashrita","Bindu", "Anvesh");
-		
-		// alist.add(true);
 		
 		//after insertions of various elements
 		System.out.println("------------------------------");
@@ -46,9 +43,9 @@ public class ListExample {
 		
 		//anonymous class
 		List blist = new ArrayList() {{
-			add("Prathap"); 
-			add("Vasantha");
-			add("Anvesh");
+			add("Pp"); 
+			add("Va");
+			add("AAA");
 			add("Bindu");
 			addAll(alist);
 			remove("Bindu");
@@ -118,6 +115,43 @@ public class ListExample {
 			System.out.print(a+" ");
 		}
 		
+		ArrayList<Student> arraylist = new ArrayList<Student>();
+		   arraylist.add(new Student(223, "Chaitanya", 26));
+		   arraylist.add(new Student(245, "Rahul", 24));
+		   arraylist.add(new Student(209, "Ajeet", 32));
+
+		   Collections.sort(arraylist);
+
+		   for(Student str: arraylist){
+				System.out.println(str);
+		   }
+		   
+		   System.out.println("Student Name Sorting:");
+		   Collections.sort(arraylist, Student.StuNameComparator);
+
+		   for(Student str: arraylist){
+				System.out.println(str);
+		   }
+
+		   /* Sorting on Rollno property*/
+		   System.out.println("RollNum Sorting:");
+		   Collections.sort(arraylist, Student.StuRollno);
+		   for(Student str: arraylist){
+				System.out.println(str);
+		   }
+		   
+		   ArrayList<String> al2 = new ArrayList<String>(alist.subList(1, 4));
+		     System.out.println("SubList stored in ArrayList: "+al2);
+		
+		     List<String> list = blist.subList(1, 4);
+		     System.out.println("SubList stored in List: "+list);
+		
+		     //alist.lastIndexOf("AA");
+		     //alist.get(1);
+		     //alist.indexOf("V L");
+		     
+		     //alist.contains("V L");
+		     
 	}
 
 }
