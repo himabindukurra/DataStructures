@@ -3,6 +3,9 @@ package com.bindu.collections.list;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Enumeration;
+import java.util.Iterator;
 import java.util.List;
 
 public class ListExample {
@@ -65,6 +68,40 @@ public class ListExample {
 		System.out.println(blist.size());
 		
 		System.out.println(blist.contains("Diana"));
+		
+		System.out.println("Using for loop");
+		
+		for(int counter=0; counter < blist.size(); counter++) {
+			System.out.print(blist.get(counter)+" ");
+		}
+		
+		System.out.println();
+		
+		int counter = 0;
+		while(counter < alist.size()) {
+			System.out.print(alist.get(counter)+" ");
+			counter++;
+		}
+		
+		System.out.println();
+		
+		System.out.println("Using Iterator");
+		
+		Iterator itr= alist.iterator();
+		while(itr.hasNext()) {
+			System.out.print(itr.next()+" ");
+		}
+		
+		System.out.println();
+		
+		System.out.println("Using Enumerations");
+		
+		Enumeration e = Collections.enumeration(alist);
+		
+		while(e.hasMoreElements()) {
+			System.out.print(e.nextElement()+" ");
+		}
+		
 		
 	}
 
