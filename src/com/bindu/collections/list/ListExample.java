@@ -151,6 +151,7 @@ public class ListExample {
 		     //alist.indexOf("V L");
 		     
 		     //alist.contains("V L");
+		     //Collections.swap(blist,1,4);
 		     
 	}
 
